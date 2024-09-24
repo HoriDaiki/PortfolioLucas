@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Permanent+Marker&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body{
+  cursor: url('../static/Normal.cur'), auto;
+  width: 100vw;
+  height: 100vh;
+}
+
+a:hover{
+  cursor: url('../static/Link.cur'), auto;
+}
+
+button:hover{
+  cursor: url('../static/Link.cur'), auto;
+}
+
+.links:hover{
+  cursor: url('../static/Link.cur'), auto;
+}
+
+h1{
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h2{
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+p, button, a{
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.conteudos {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: left;
+  z-index: 2;
+
+
+}
+
+.transparencia {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 2;
+}
+
+.links, .apresentacao {
+  margin: 2em;
+}
+
+button {
+  padding: 10px 20px; /* Ajuste o padding conforme necessário */
+  outline: none;
+  border: none;
+  border-radius: 10em;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  position: relative; /* Necessário para o posicionamento do pseudo-elemento */
+  transition: color 0.3s;
+
+  cursor: url('../static/Link.cur'), auto;
+}
+
+button::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px; /* Altura da linha sublinhada */
+  background-color: #1479EA; /* Cor da linha */
+  transform: scaleX(0); /* Inicialmente, a linha não é visível */
+  transform-origin: bottom right; /* Origem da transformação da linha */
+  transition: transform 0.3s; /* Transição suave para o efeito */
+
+  cursor: url('../static/Link.cur'), auto;
+
+}
+
+button:hover::after {
+  transform: scaleX(1); /* A linha se expande ao passar o mouse */
+  transform-origin: bottom left; /* A linha se expande da esquerda para a direita */
+
+  cursor: url('../static/Link.cur'), auto;
+}
+
+.foto{
+  width:15%;
+  height: auto;
+  border-radius: 50px;
+}
+

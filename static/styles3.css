@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Permanent+Marker&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+h1{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  h2, h3{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  p, button, a,{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+.infos{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  z-index:3;
+} 
+
+body{
+    background-image: url('../static/azure-paint-flowing-dark-water.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;  
+}
+
+.transparencia {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 2; /* Garante que fique sobre o fundo */
+  }
+
+.containerPort {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  position: relative; /* Permite o z-index para funcionar */
+  z-index: 3; /* Garante que fique sobre a camada de transparência */
+  padding: 20px; /* Ajuste o padding conforme necessário */
+}
+
+a {
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 5px; 
+    transition: color 0.3s ease;
+  }
+  
+  a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #1479EA;
+    top: 0; 
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: top right;
+    transition: transform 0.3s ease;
+  }
+  
+  a:hover::before {
+    transform: scaleX(1); 
+    transform-origin: top left;
+  }
+  
+  a:hover {
+    color: #555; 
+  }
+
+  h1{
+    position: relative; /* Permite o z-index para funcionar */
+  z-index: 3; /* Garante que fique sobre a camada de transparência */
+  padding: 20px; /* Ajuste o padding conforme necessário */
+  }
